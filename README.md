@@ -1,2 +1,0 @@
-# node
-myspace node assignments
