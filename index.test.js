@@ -4,6 +4,7 @@ describe('Our array functions', () => {
     
     describe('addToCart Function', () => {
         test('An item is added to cart', () => {
+            arrayFunctions.emptyCart();
             arrayFunctions.addToCart('milk', 3, 1);
             expect(arrayFunctions.cart.length).toEqual(1);
             expect(arrayFunctions.cart[0].name).toEqual('milk');
@@ -12,11 +13,12 @@ describe('Our array functions', () => {
         });
 
         test('Calling addToCart is many times', () => {
-            arrayFunctions.emptyCart;
+            arrayFunctions.emptyCart();
             arrayFunctions.addToCart('abc', 3, 1);
             arrayFunctions.addToCart('pop tarts', 5, 4);
             expect(arrayFunctions.cart.length).toEqual(2);
         });
+        
     });        
 
 });
